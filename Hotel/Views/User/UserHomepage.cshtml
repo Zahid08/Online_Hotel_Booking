@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "UserHomepage";
+    Layout = "~/Views/Shared/_UserPanelLayout.cshtml";
+}
+
+
+
+@if (Session["UserID"] != null)
+{
+    
+    <h3>@Session["UserType"].ToString()</h3>
+   
+     <h4> Hello @Session["Username"].ToString() </h4><br />
+
+}

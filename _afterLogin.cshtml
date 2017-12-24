@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hotel</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body style="height:700px;border:1px solid red;">
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+           
+
+            <ul class="nav navbar-nav navbar-inverse" style="margin-left:50px">
+
+                <li>@Html.ActionLink("Home", "Index")</li>
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        Room Details
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("AddRoom", "AddRoom")</li>
+                        <li>@Html.ActionLink("AvailableRoom", "AvailableRoom")</li>
+                        <li>@Html.ActionLink("ManageRoom", "ManageRoom")</li>
+
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        Billing Details
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("BillDetails", "BillDetails")</li>
+                        
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        User Details
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Userdetails", "UserDetails")</li>
+
+                    </ul>
+                </li>
+
+
+          
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right" style="margin-left:70px">
+
+                 <li>@Html.ActionLink("Logout", "Logout", "Admin");</li>     
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container" style="shape-margin:10px;">
+        @RenderBody()
+    </div>
+
+</body>
+</html>
