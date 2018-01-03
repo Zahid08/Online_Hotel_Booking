@@ -1,0 +1,53 @@
+﻿@model IEnumerable<HotelEntity.Class.Contact>
+
+@{
+    ViewBag.Title = "MailInformation";
+    Layout = "~/Views/Shared/_AminPanelLayout.cshtml";
+}
+
+<div class="panel panel-primary" style="margin-top:70px;">
+    <div class="panel-heading">Mail Information</div>
+
+    <table class="table table-bordered table-hover table-striped" id="myTable">
+
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Message)
+            </th>
+
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Message)
+                </td>
+
+                <td>
+                 @Html.ActionLink("ViewMessage", "DetailsMails", new { id = item.ID }) |
+                 </td>
+            </tr>
+        }
+
+    </table>
+    </div>

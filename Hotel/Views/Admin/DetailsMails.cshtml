@@ -1,0 +1,49 @@
+﻿@model HotelEntity.Class.Contact
+
+@{
+    ViewBag.Title = "DetailsMails";
+    Layout = "~/Views/Shared/_AminPanelLayout.cshtml";
+}
+
+<div class="panel panel-primary" style="margin-top:70px;">
+    <div class="panel-heading">Details OF  Message</div>
+
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+               Name:
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <hr />
+            <dt>
+              EMail:
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+            <hr />
+            <dt>
+              Phone No :
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Phone)
+            </dd>
+            <hr />
+            <dt>
+              Message->
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Message)
+            </dd>
+            <hr />
+
+        </dl>
+    </div>
+  </div>

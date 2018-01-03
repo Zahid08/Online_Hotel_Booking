@@ -71,14 +71,15 @@
                 </li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i>
+                     <img src="/Scripts/Frontend/images/Zahid.jpg" height="20" width="20"  alt="none"/>
+ 
                         @if (Session["UserID"] != null)
                         {
                          @Session["Firstname"].ToString() }<b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
                         <li>
-                            <a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                           @Html.ActionLink("Profile", "UserProfile", new { id =@Session["UserID"] })
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
@@ -105,8 +106,8 @@
                             </div>
                         </li>
                         <li>
-                            <a href="#" class="active"><i class="fa fa-dashboard fa-fw"></i> Home</a>
-                        </li>
+                            @Html.ActionLink(" Home", "UserHomepage", "User", null, new { @class = "glyphicon glyphicon-home" })  
+                          </li>
                         <li style="margin-top:10px;">
                             <a href="#"><i class="fa fa-sitemap fa-fw"></i>Customers<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">

@@ -12,5 +12,9 @@ namespace HotelRepository.Class
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Customers> Customers { get; set; }
+
+        public DbSet<Rooms> Rooms { get; set; }
+
+        public DbSet<Contact> Contacts { get; set; }
     }
 }

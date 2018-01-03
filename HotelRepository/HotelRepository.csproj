@@ -47,12 +47,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\ContactRepository.cs" />
     <Compile Include="Class\CustomerRepository.cs" />
     <Compile Include="Class\DataContext.cs" />
     <Compile Include="Class\Repository.cs" />
+    <Compile Include="Class\RoomsRepository.cs" />
     <Compile Include="Class\UserRepository.cs" />
+    <Compile Include="Interface\IContactRepository.cs" />
     <Compile Include="Interface\ICustomerRepository.cs" />
     <Compile Include="Interface\IRepository.cs" />
+    <Compile Include="Interface\IRoomRepository.cs" />
     <Compile Include="Interface\IUserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

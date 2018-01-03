@@ -22,6 +22,8 @@ namespace Hotel.App_Start
         {
             Container.Register<IUserService,UserService>().Singleton();
             Container.Register<ICustomerService, CustomerService>().Singleton();
+            Container.Register<IRoomsService, RoomService>().Singleton();
+            Container.Register<IContactService, ContactService>().Singleton();
         }
     }
 }
